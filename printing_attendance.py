@@ -16,8 +16,8 @@ def append_marks(driver,value):
 
 driver = webdriver.Edge() 
 driver.get("https://aiveda.tech/dtcdashboard/login.php") 
-driver.find_element(by=By.NAME, value="username").send_keys("chaynakya@delhitechnicalcampus.ac.in") 
-driver.find_element(by=By.NAME, value="password").send_keys("chanakya2006") 
+driver.find_element(by=By.NAME, value="username").send_keys("The username") # Change The username to your email id 
+driver.find_element(by=By.NAME, value="password").send_keys("The password") # Change The password to your password
 driver.find_element(by=By.ID, value="student").click()
 driver.find_element(By.CSS_SELECTOR, "input[type='submit']").click()
 driver.execute_script("loadIframe('student_dashboardtesting.php')")
@@ -41,3 +41,10 @@ driver.quit()
 
 for i in attendance:
     print(i+" : "+attendance[i])
+
+
+"""
+For the program to run on your device you need run the following commands first on your command prompt (I am assuming you have python set up already):
+pip install selenium
+pip install beautifulsoup4
+"""
